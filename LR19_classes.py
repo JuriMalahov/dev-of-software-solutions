@@ -51,6 +51,7 @@ class Circus_workers(object):
     def __add__(self, x):
         """Метод __add__ увеличивает стаж работы."""
         self.__work_experience += x
+        print('Work experience was changed')
 
     @property
     def surname(self):
@@ -896,14 +897,3 @@ class CircusProgramDatabase(object):
             raise ValueError('value does not exist')
         program.change_price(price)
         self.save_database()
-
-
-'''circus_term = CircusProgramDatabase()
-circus_term.add_circus_program('Цирк Шапито', '21.04.2021', '21.04.2021-14.05.2021', ['21.04.2021, 7:00',
-                                                                                      '26.04.2021, 8:30',
-                                                                                      '03.05.2021, 7:20',
-                                                                                      '07.05.2021, 9:00',
-                                                                                      '14.05.2021, 8:30'], 400)
-circus_term.change_price('Цирк Шапито', 300)
-print(circus_term.database)'''
-
